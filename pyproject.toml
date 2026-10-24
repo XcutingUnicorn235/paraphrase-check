@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nanoagent-paraphrase-check"
+version = "0.1.0"
+description = "Paraphrase Check: decide whether two sentences that share their words mean the same"
+requires-python = ">=3.12"
+dependencies = ["mcp>=1.27,<2", "slimconfig"]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+# The bundled PAWS snapshot and its license notice ship with the package.
+plugin = ["snapshot.json.gz", "PAWS-LICENSE.txt"]
+
+[tool.uv.sources]
+slimconfig = { git = "https://github.com/zeyuyang8/slimconfig", branch = "master" }
+
+[tool.ruff]
+line-length = 120
+
+[tool.pytest.ini_options]
+# contract.py and verifier/ live at the plugin root.
+pythonpath = ["."]
+addopts = "-p no:cacheprovider"
+markers = ["bundled: reads the real bundled snapshot instead of the made-up fixture"]

@@ -1,0 +1,16 @@
+LICENSE OF PAWS (Paraphrase Adversaries from Word Scrambling)
+
+snapshot.json.gz is a selection of 900 sentence pairs, with their labels, from the test split of
+PAWS-Wiki Labeled (Final), https://github.com/google-research-datasets/paws, by Google LLC.
+The PAWS repository states its license as follows (copied from its LICENSE file):
+
+The dataset may be freely used for any purpose, although acknowledgement of
+Google LLC ("Google") as the data source would be appreciated. The dataset is
+provided "AS IS" without any warranty, express or implied. Google disclaims all
+liability for any damages, direct or indirect, resulting from the use of the
+dataset.
+
+Please cite:
+
+  Yuan Zhang, Jason Baldridge and Luheng He. PAWS: Paraphrase Adversaries from Word Scrambling.
+  In Proc. of NAACL, 2019.

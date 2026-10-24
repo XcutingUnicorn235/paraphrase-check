@@ -1,0 +1,11 @@
+_ > nanoagent.plugin.v0001.ProductConfig:
+tagline: "Tell whether two sentences with the same words mean the same thing"
+summary: "Paraphrase Check shows a model four pairs of Wikipedia sentences that share almost all their words, some with a phrase moved and some with who did what swapped, and asks whether each pair means the same. Its answers are graded against the human labels of Google's PAWS dataset, which the model never sees."
+highlights:
+  - "Real sentences and human labels from PAWS, bundled and pinned by hash"
+  - "Pairs picked so that word overlap, bigram overlap and word order cannot tell the labels apart"
+  - "Scored so that answering one way everywhere, turning every answer around or guessing earns about nothing"
+steps:
+  - "Ask for a batch, from 0 to 224"
+  - "The model reads its four pairs and what changed between each pair's sentences"
+  - "It judges each pair same or different, and the verifier compares the verdicts with the human labels"
